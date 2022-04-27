@@ -1,0 +1,13 @@
+{% extends "base.njk" %}
+{% block blog_body %}
+	<a href="/" class="back-btn"> &lt;&lt; Back To Home</a>
+	<div class="blog-body">
+		<div class="blog-excerpt">
+			{{ excerpt }}
+		</div>
+			<img class="blog-img" alt="" src="{{ thumb }}">
+		<div class="blog-excerpt">
+			{{ desc }}
+		</div>
+	</div> 
+{% endblock %}

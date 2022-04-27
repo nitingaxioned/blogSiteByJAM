@@ -1,0 +1,27 @@
+
+{% extends "base.njk" %}
+{% block blog_list %}
+{% if pagination.href.previous %}
+  <a href="{{pagination.href.previous}}" class="page-nav-btn"> &lt;&lt; Previous Page</a>
+{% endif %}
+{% if pagination.href.next %}
+  <a href="{{pagination.href.next}}" class="page-nav-btn">Next Page &gt;&gt;</a>
+{% endif %}
+{% for blog in pagination.items %}
+  <div class="blog-list">
+    <a href="{{ blog.url }}" title="{{ blog.data.title }}">
+      <h3>{{ blog.data.title }}</h3>
+    </a>
+		<div class="blog-excerpt">
+			{{ blog.data.excerpt }}
+		</div>
+		<img class="blog-img" alt="{{ blog.data.title }}" src="{{ blog.data.thumb }}">
+	</div> 
+{% endfor %}
+{% if pagination.href.previous %}
+  <a href="{{pagination.href.previous}}" class="page-nav-btn"> &lt;&lt; Previous Page</a>
+{% endif %}
+{% if pagination.href.next %}
+  <a href="{{pagination.href.next}}" class="page-nav-btn">Next Page &gt;&gt;</a>
+{% endif %}
+{% endblock %}

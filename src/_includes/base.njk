@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<!--container start-->
+<div class="container">
+  <!--header section start-->
+  <header>
+    <p>{{title}}</p>
+  </header>
+  <!--header section end-->
+  <!--main section start-->
+  <main>
+    <div class="wrapper">
+      {{ content | safe }}
+      {% block blog_list %} {% endblock %}
+      {% block blog_body %} {% endblock %}
+    </div>
+  </main>
+  <!--main section end-->
+  <!--footer section start-->
+  <footer>      
+    <p>Footer Of Blog Site<p>
+  </footer>
+  <!--footer section end-->
+</div>
+<script src="/assets/js/script.js"></script>
+</body>
+</html>
